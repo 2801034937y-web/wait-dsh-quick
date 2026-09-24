@@ -1,0 +1,25 @@
+# 换行符规范化：仓库内统一 LF，检出的 Windows 脚本自动转 CRLF
+* text=auto
+
+# PowerShell / 批处理必须保持 CRLF，否则在 Windows 上可能执行异常
+*.ps1   text eol=crlf
+*.psm1  text eol=crlf
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+# 文本文件统一 LF
+*.md    text eol=lf
+*.txt   text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+LICENSE text eol=lf
+
+# 二进制文件不做换行符转换
+*.ico   binary
+*.png   binary
+*.jpg   binary
+*.gif   binary
+*.zip   binary
+*.exe   binary
+*.dll   binary
